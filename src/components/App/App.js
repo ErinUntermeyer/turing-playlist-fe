@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Form from '../Form/Form'
 import Songs from '../Songs/Songs'
 import './App.css'
 import SongController from '../SongController/SongController'
@@ -22,18 +23,17 @@ class App extends Component {
 
   render() {
     return (
-      <div className='App'>
+      <body className='App'>
         <header className='App-header'>
           <h1>Turing Playlist</h1>
         </header>
         <div className='App-background'>
           <main>
-						<Songs
-							allSongs={this.state.songQueue}
-						/>
+						<Form />
+						<Songs allSongs={this.state.songQueue} />
           </main>
         </div> 
-      </div>
+      </body>
     )
   }
 }
