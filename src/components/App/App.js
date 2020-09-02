@@ -3,7 +3,7 @@ import Form from '../Form/Form'
 import Songs from '../Songs/Songs'
 import './App.css'
 import SongController from '../SongController/SongController'
-import { getSongs } from '../../helpers/apiCalls'
+import { getSongs, postSong } from '../../helpers/apiCalls'
 
 class App extends Component {
   constructor() {
@@ -26,7 +26,13 @@ class App extends Component {
 			artistName: artist,
 			link: link
 		}
-		this.setState({ songQueue: [...this.state.songQueue, newSong] })
+		postSong(newSong)
+			.then(data => {
+				this.setState({ songQueue: [...this.state.songQueue, data] })
+			})
+			.catch(error => {
+				console.log(error)
+			})
 	}
 
 
