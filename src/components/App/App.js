@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Songs from '../Songs/Songs'
 import './App.css'
 import SongController from '../SongController/SongController'
 import { getSongs } from '../../helpers/apiCalls'
@@ -15,7 +16,6 @@ class App extends Component {
 		getSongs()
 			.then(data => {
 				this.setState({ songQueue: data })
-				console.log(this.state.songQueue)
 			})
 	}
 
@@ -28,6 +28,9 @@ class App extends Component {
         </header>
         <div className='App-background'>
           <main>
+						<Songs
+							allSongs={this.state.songQueue}
+						/>
           </main>
         </div> 
       </div>
