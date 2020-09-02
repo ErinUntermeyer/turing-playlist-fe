@@ -1,0 +1,17 @@
+.Form-container {
+	background: white;
+	opacity: 80%;
+	padding: 10px 10px 30px 10px;
+}
+
+input {
+	padding: 10px;
+}
+
+label {
+	padding: 10px;
+}
+
+button {
+	height: 30px;
+}

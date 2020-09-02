@@ -29,7 +29,7 @@ class Form extends Component {
 
 	render() {
 		return (
-			<form onSubmit={(event => this.handleSubmit(event))}>
+			<form className='Form-container' onSubmit={(event => this.handleSubmit(event))}>
 				<h2>Add A New Song!</h2>
 				<label htmlFor='song'>Song Name:</label>
 				<input

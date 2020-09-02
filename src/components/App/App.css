@@ -30,7 +30,7 @@
 .App-background {
   background-image: url('../../assets/music-listening-bar.jpg');
   background-size:cover;
-  height: 100%;
+	height: 100%;
 }
 
 
@@ -41,5 +41,5 @@ main {
   backdrop-filter: blur(2px);
   display: flex;
   flex-direction: column;
-  align-items: center;
+	align-items: center;
 }
