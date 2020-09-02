@@ -5,8 +5,16 @@ class Form extends Component {
 	constructor() {
 		super()
 		this.state = {
-
+			song: '',
+			artist: '',
+			link: ''
 		}
+	}
+
+	handleInput(event) {
+		const inputName = event.target.id
+		const inputValue = event.target.value
+		this.setState({ [inputName]: inputValue})
 	}
 
 	render() {
