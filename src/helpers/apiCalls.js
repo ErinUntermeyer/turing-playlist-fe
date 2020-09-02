@@ -9,15 +9,11 @@ export const getSongs = () => {
 		})
 }
 
-export const postSong = (songName, artistName, link) => {
-	return fetch('', {
+export const postSong = (newSong) => {
+	return fetch('http://localhost:8080/api/v1/playlist', {
 		method: 'POST',
 		headers: { 'Content-Type': 'application/json' },
-		body: JSON.stringify({
-			songName: songName,
-			artistName: artistName,
-			link: link
-		})
+		body: JSON.stringify(newSong)
 	})
 	.then(response => {
 		if (response.ok) {
