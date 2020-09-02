@@ -20,6 +20,11 @@ class Form extends Component {
 	handleSubmit(event) {
 		event.preventDefault()
 		this.props.addSong(this.state.song, this.state.artist, this.state.link)
+		this.setState({
+			song: '',
+			artist: '',
+			link: ''
+		})
 	}
 
 	render() {
