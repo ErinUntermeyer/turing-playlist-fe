@@ -20,6 +20,15 @@ class App extends Component {
 			})
 	}
 
+	addSong = (song, artist, link) => {
+		const newSong = {
+			songName: song,
+			artistName: artist,
+			link: link
+		}
+		this.setState({ songQueue: [...this.state.songQueue, newSong] })
+	}
+
 
   render() {
     return (
@@ -29,7 +38,7 @@ class App extends Component {
         </header>
         <div className='App-background'>
           <main>
-						<Form />
+						<Form addSong={this.addSong} />
 						<Songs allSongs={this.state.songQueue} />
           </main>
         </div> 
