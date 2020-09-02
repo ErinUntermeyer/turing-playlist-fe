@@ -6,7 +6,7 @@ const SongCard = ({ songName, artistName, link, id }) => {
 		<article className='SongCard'>
 			<h3>Song Name: {songName}</h3>
 			<h4>Artist: {artistName}</h4>
-			<p>{link}</p>
+			<a href={link}>Listen Here!</a>
 		</article>
 	)
 }
