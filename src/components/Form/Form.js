@@ -17,9 +17,14 @@ class Form extends Component {
 		this.setState({ [inputName]: inputValue})
 	}
 
+	handleSubmit(event) {
+		event.preventDefault()
+		this.props.addSong(this.state.song, this.state.artist, this.state.link)
+	}
+
 	render() {
 		return (
-			<form>
+			<form onSubmit={(event => this.handleSubmit(event))}>
 				<h2>Add A New Song!</h2>
 				<label htmlFor='song'>Song Name:</label>
 				<input
@@ -45,6 +50,7 @@ class Form extends Component {
 					value={this.state.link}
 					onChange={(event) => this.handleInput(event)}
 				/>
+				<button type='submit'>Add Song!</button>
 			</form>
 		)
 	}
