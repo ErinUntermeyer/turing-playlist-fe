@@ -8,3 +8,22 @@ export const getSongs = () => {
 			}
 		})
 }
+
+export const postSong = (songName, artistName, link) => {
+	return fetch('', {
+		method: 'POST',
+		headers: { 'Content-Type': 'application/json' },
+		body: JSON.stringify({
+			songName: songName,
+			artistName: artistName,
+			link: link
+		})
+	})
+	.then(response => {
+		if (response.ok) {
+			return response.json()
+		} else {
+			throw response
+		}
+	})
+}
