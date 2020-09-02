@@ -30,8 +30,8 @@ describe('Songs Component', () => {
 			/>
 		)
 
-		const songName1 = screen.getByText(/cool beans/i)
-		const songName2 = screen.getByText(/you are crushing it/i)
+		const songName1 = screen.getByRole('heading', {name: /cool beans/i})
+		const songName2 = screen.getByRole('heading', {name: /you are crushing it/i})
 		const artistName1 = screen.getByText(/the beans/i)
 		const artistName2 = screen.getByText(/affirmations/i)
 

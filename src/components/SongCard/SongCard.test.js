@@ -10,12 +10,12 @@ describe('SongCard Component', () => {
 			<SongCard
 				songName='I am a beautiful song'
 				artistName='Yours Truly'
-				link='Link to I am a beautiful song'
+				link='Listen here!'
 				id={1}
 			/>
 		)
 
-		const songName = screen.getByText(/i am a beautiful song/i)
+		const songName = screen.getByRole('heading', {name: /i am a beautiful song/i})
 		const artistName = screen.getByText(/yours truly/i)
 		
 		expect(songName).toBeInTheDocument()
