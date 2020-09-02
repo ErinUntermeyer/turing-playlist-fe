@@ -1,4 +1,5 @@
 import React from 'react'
+import SongCard from '../SongCard/SongCard'
 import './Songs.css'
 
 const Songs = ({ allSongs }) => {
