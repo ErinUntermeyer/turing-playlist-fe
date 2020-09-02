@@ -32,7 +32,7 @@ class App extends Component {
 
   render() {
     return (
-      <body className='App'>
+      <div className='App'>
         <header className='App-header'>
           <h1>Turing Playlist</h1>
         </header>
@@ -42,7 +42,7 @@ class App extends Component {
 						<Songs allSongs={this.state.songQueue} />
           </main>
         </div> 
-      </body>
+      </div>
     )
   }
 }
